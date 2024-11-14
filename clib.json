@@ -1,0 +1,19 @@
+{
+    "name": "red_black_tree",
+    "version": "0.0.0",
+    "repo": "goodcleanfun/red_black_tree",
+    "description": "Generic red-black tree",
+    "keywords": ["tree", "red-black tree", "search tree", "binary search tree"],
+    "license": "MIT",
+    "dependencies": {
+      "goodcleanfun/binary_tree": "*",
+      "goodcleanfun/memory_pool": "*"
+    },
+    "development": {
+      "silentbicycle/greatest": "*"
+    },
+    "src": [
+      "src/red_black_tree.h"
+    ]
+    
+  }
