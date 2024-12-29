@@ -1,6 +1,6 @@
 {
     "name": "red_black_tree",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repo": "goodcleanfun/red_black_tree",
     "description": "Generic red-black tree",
     "keywords": ["tree", "red-black tree", "search tree", "binary search tree"],
