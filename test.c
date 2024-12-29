@@ -28,31 +28,31 @@ TEST test_red_black_tree(void) {
     red_black_tree_uint32_insert(tree, 10, "h");
     red_black_tree_uint32_insert(tree, 15, "i");
 
-    char *a = red_black_tree_uint32_search(tree->root, 7);
+    char *a = red_black_tree_uint32_get(tree->root, 7);
     ASSERT_STR_EQ(a, "a");
 
-    char *b = red_black_tree_uint32_search(tree->root, 18);
+    char *b = red_black_tree_uint32_get(tree->root, 18);
     ASSERT_STR_EQ(b, "b");
 
-    char *c = red_black_tree_uint32_search(tree->root, 3);
+    char *c = red_black_tree_uint32_get(tree->root, 3);
     ASSERT_STR_EQ(c, "c");
 
-    char *d = red_black_tree_uint32_search(tree->root, 26);
+    char *d = red_black_tree_uint32_get(tree->root, 26);
     ASSERT_STR_EQ(d, "d");
 
-    char *e = red_black_tree_uint32_search(tree->root, 22);
+    char *e = red_black_tree_uint32_get(tree->root, 22);
     ASSERT_STR_EQ(e, "e");
 
-    char *f = red_black_tree_uint32_search(tree->root, 11);
+    char *f = red_black_tree_uint32_get(tree->root, 11);
     ASSERT_STR_EQ(f, "f");
 
-    char *g = red_black_tree_uint32_search(tree->root, 8);
+    char *g = red_black_tree_uint32_get(tree->root, 8);
     ASSERT_STR_EQ(g, "g");
 
-    char *h = red_black_tree_uint32_search(tree->root, 10);
+    char *h = red_black_tree_uint32_get(tree->root, 10);
     ASSERT_STR_EQ(h, "h");
 
-    char *i = red_black_tree_uint32_search(tree->root, 15);
+    char *i = red_black_tree_uint32_get(tree->root, 15);
     ASSERT_STR_EQ(i, "i");
 
     h = red_black_tree_uint32_delete(tree, 10);
@@ -70,17 +70,17 @@ TEST test_red_black_tree(void) {
     c = red_black_tree_uint32_delete(tree, 3);
     ASSERT_STR_EQ(c, "c");
 
-    c = red_black_tree_uint32_search(tree->root, 3);
+    c = red_black_tree_uint32_get(tree->root, 3);
     ASSERT(c == NULL);
 
     red_black_tree_uint32_insert(tree, 3, "c");
-    c = red_black_tree_uint32_search(tree->root, 3);
+    c = red_black_tree_uint32_get(tree->root, 3);
     ASSERT_STR_EQ(c, "c");
 
     c = red_black_tree_uint32_delete(tree, 3);
     ASSERT_STR_EQ(c, "c");
 
-    c = red_black_tree_uint32_search(tree->root, 3);
+    c = red_black_tree_uint32_get(tree->root, 3);
     ASSERT(c == NULL);
 
     e = red_black_tree_uint32_delete(tree, 22);
@@ -95,7 +95,7 @@ TEST test_red_black_tree(void) {
     i = red_black_tree_uint32_delete(tree, 15);
     ASSERT_STR_EQ(i, "i");
 
-    i = red_black_tree_uint32_search(tree->root, 15);
+    i = red_black_tree_uint32_get(tree->root, 15);
     ASSERT(i == NULL);
 
     ASSERT(tree->root->left == NULL);
